@@ -1,13 +1,140 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>FHSU Movie Theater Website</title>
-</head> 
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineTime - Movie Theater</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <h1>Welcome to the FHSU Movie Theater!</h1>
-    <p>Enjoy the latest movies and special screenings at our state-of-the-art theater.</p>
-    <p> Test push </p>
 
+<!-- Navigation Bar -->
+<header class="navbar">
+    <div class="logo">FHSUMOVIETHEATER</div>
+    <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#now-showing">Now Showing</a>
+        <a href="#">Coming Soon</a>
+        <a href="#">Tickets</a>
+        <a href="#">Contact</a>
+
+        <form class="search" role="search" action="#" method="get">
+            <label class="visually-hidden" for="q">Search movies</label>
+            <input id="q" name="q" type="search" placeholder="Search movies…" autocomplete="off" />
+            <button type="submit">Search</button>
+        </form>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Experience Movies Like Never Before</h1>
+    <p>Book tickets for the latest blockbusters and immerse yourself in the magic of cinema.</p>
+    <a class="cta-btn" href="#now-showing">🎟 Book Now</a>
+</section>
+
+<!-- Now Showing Section -->
+<section id="now-showing" class="section">
+    <h2>Now Showing</h2>
+    <div class="grid">
+
+        <article class="card">
+            <div class="poster">Poster</div>
+            <div class="content">
+                <div class="title">"Movie Name"</div>
+                <div class="meta">rating · runtime · genre</div>
+                <button class="buy-btn">Buy Tickets</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="poster">Poster</div>
+            <div class="content">
+                <div class="title">"Movie Name"</div>
+                <div class="meta">rating · runtime · genre</div>
+                <button class="buy-btn">Buy Tickets</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="poster">Poster</div>
+            <div class="content">
+                <div class="title">"Movie Name"</div>
+                <div class="meta">rating · runtime · genre</div>
+                <button class="buy-btn">Buy Tickets</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="poster">Poster</div>
+            <div class="content">
+                <div class="title">"Movie Name"</div>
+                <div class="meta">rating · runtime · genre</div>
+                <button class="buy-btn">Buy Tickets</button>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- Coming Soon Section -->
+<section id="coming-soon" class="section">
+    <h2>Coming Soon</h2>
+    <div class="grid">
+
+        <article class="card">
+            <div class="poster">Poster</div>
+            <div class="content">
+                <div class="title">"Movie Name"</div>
+                <div class="meta">rating · release date · genre</div>
+                <button class="buy-btn">Notify Me</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="poster">Poster</div>
+            <div class="content">
+                <div class="title">"Movie Name"</div>
+                <div class="meta">rating · release date · genre</div>
+                <button class="buy-btn">Notify Me</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="poster">Poster</div>
+            <div class="content">
+                <div class="title">"Movie Name"</div>
+                <div class="meta">rating · release date · genre</div>
+                <button class="buy-btn">Notify Me</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="poster">Poster</div>
+            <div class="content">
+                <div class="title">"Movie Name"</div>
+                <div class="meta">rating · release date · genre</div>
+                <button class="buy-btn">Notify Me</button>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- About Theater Section -->
+<section id="about" class="section">
+    <h2>About FHSU Movie Theater</h2>
+    <p>
+        FHSU Movie Theater is your local destination for an unforgettable cinema experience.
+        Enjoy comfortable seating, crystal-clear sound, and the latest blockbuster releases —
+        all in one place. Our mission is to bring the magic of movies to our community, one show at a time.
+    </p>
+</section>
+
+<!-- Footer -->
+<footer class="section footer">
+    © 2025 FHSUMOVIETHEATER
+</footer>
+
+</body>
 </html>
