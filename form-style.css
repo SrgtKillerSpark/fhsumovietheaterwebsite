@@ -1,0 +1,121 @@
+#pay{
+width: 400px;
+margin: 200px auto;
+text-align: center;
+}
+
+#pay form{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 
+    'l1 l1 name name name name'
+    'l2 l2 card card card card'
+    'exp exp exp exp exp exp'
+    'l3 l3 l3 l4 l4 l4'
+    'month month month year year year'
+    'l5 l5 cvv cvv cvv cvv'
+    'header header header header header header'
+    'l6 l6 street street street street'
+    'l7 l7 city city city city'
+    'l8 l8 state state state state'
+    'l9 l9 zip zip zip zip'
+    'button button button button button button'
+    ;
+    column-gap: 5px;
+    row-gap: 10px;
+}
+
+#pay form label{
+    justify-self: right;
+}
+
+#pay form h3{
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#name-label{
+    grid-area: l1;
+}
+#fullname{
+    grid-area: name;
+}
+
+#card-label{
+    grid-area: l2;
+}
+
+#cardnum{
+    grid-area: card;
+}
+
+#exp{
+    grid-area: exp;
+}
+
+#month-label{
+    grid-area: l3;
+}
+
+#year-label{
+    grid-area: l4;
+}
+
+#month{
+    grid-area: month;
+}
+
+#year{
+    grid-area: year;
+}
+
+#cvv-label{
+    grid-area: l5;
+}
+
+#cvv{
+    grid-area: cvv;
+    max-width: 40px;
+}
+
+#bill-header{
+    grid-area: header;
+}
+
+#street-label{
+    grid-area: l6;
+}
+
+#street{
+    grid-area: street;
+}
+
+#city-label{
+    grid-area: l7;
+}
+
+#city{
+    grid-area: city;
+}
+
+#state-label{
+    grid-area: l8;
+}
+
+#state{
+    grid-area: state;
+}
+
+#zip-label{
+    grid-area: l9;
+}
+
+#zip{
+    grid-area: zip;
+}
+
+#submit{
+    grid-area: button;
+    width: 60px;
+    place-self: center;
+}
