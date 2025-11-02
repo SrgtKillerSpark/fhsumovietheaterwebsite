@@ -1,0 +1,68 @@
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.search-bar input[type="search"] {
+    width: 60%;
+    max-width: 450px;
+    padding: 12px 18px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    color: #333;
+    opacity: 1;            /* was 0.7 for disabled look */
+    cursor: text;          /* was not-allowed */
+    text-align: center;
+}
+
+.search-bar input[type="search"]:hover {
+    opacity: 0.9;
+}
+
+.search-bar .hint {
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.coming-soon {
+    text-align: center;
+    color: #e8a90f; /* or #aaa if you prefer subtle gray */
+    font-style: italic;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    opacity: 0.85;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #e8a90f;  /* your gold accent */
+    color: #111;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+    background-color: #f1b90f;
+}
