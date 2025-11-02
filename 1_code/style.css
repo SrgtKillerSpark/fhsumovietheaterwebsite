@@ -33,6 +33,15 @@ html {
     letter-spacing: 1px;
 }
 
+.logo a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+.logo a:hover {
+    opacity: 0.8; /* slight hover effect */
+}
+
 .nav-links {
     display: flex;
     gap: 25px;
