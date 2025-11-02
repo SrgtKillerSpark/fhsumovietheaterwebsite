@@ -260,3 +260,45 @@ html {
         display: none;
     }
 }
+
+/* Movie Detail Page Styles */
+.movie-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 25px;
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.35);
+}
+
+.poster-img {
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.details-text {
+    flex: 1;
+    min-width: 250px;
+    color: #ddd;
+}
+
+.details-text p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+    .movie-details {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .poster-img {
+        width: 80%;
+    }
+}
