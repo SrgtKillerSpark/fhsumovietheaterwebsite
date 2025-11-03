@@ -6,6 +6,7 @@
     <title>FHSUMOVIETHEATER</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="payment-style.css">
+    <link rel="stylesheet" href="seats.css">
 </head>
 <body>
 
@@ -26,6 +27,46 @@
         </form>
     </nav>
 </header>
+
+<!-- Seats -->
+<section class="seat-section">
+    <h2>Select Your Seats</h2>
+    <div class="screen"></div>
+    <div class="seat-grid"></div>
+        <!-- 5x5 grid of seats -->
+        <button class="seat" data-seat="A1">A1</button>
+        <button class="seat" data-seat="A2">A2</button>
+        <button class="seat" data-seat="A3">A3</button>
+        <button class="seat" data-seat="A4">A4</button>
+        <button class="seat" data-seat="A5">A5</button>
+
+        <button class="seat" data-seat="B1">B1</button>
+        <button class="seat" data-seat="B2">B2</button>
+        <button class="seat" data-seat="B3">B3</button>
+        <button class="seat" data-seat="B4">B4</button>
+        <button class="seat" data-seat="B5">B5</button>
+
+        <button class="seat" data-seat="C1">C1</button>
+        <button class="seat" data-seat="C2">C2</button>
+        <button class="seat" data-seat="C3">C3</button>
+        <button class="seat" data-seat="C4">C4</button>
+        <button class="seat" data-seat="C5">C5</button>
+
+        <button class="seat" data-seat="D1">D1</button>
+        <button class="seat" data-seat="D2">D2</button>
+        <button class="seat" data-seat="D3">D3</button>
+        <button class="seat" data-seat="D4">D4</button>
+        <button class="seat" data-seat="D5">D5</button>
+
+        <button class="seat" data-seat="E1">E1</button>
+        <button class="seat" data-seat="E2">E2</button>
+        <button class="seat" data-seat="E3">E3</button>
+        <button class="seat" data-seat="E4">E4</button>
+        <button class="seat" data-seat="E5">E5</button>
+    </div>
+    <p id ="selected-seats">Selected Seats: None</p>
+    <button id="continue-btn">Continue to Payment</button>
+</section>
 
 <!-- Form -->
  <div id="pay">
@@ -94,6 +135,36 @@
 <footer class="section footer">
     © 2025 FHSUMOVIETHEATER
 </footer>
+
+<!-- JS for Seat Selection -->
+<script>
+    const seats = document.querySelectorAll('.seat');
+    const selectedSeatsDisplay = document.getElementById('selected-seats');
+    let selectedSeats = [];
+
+    seats.forEach(seat => {
+        seat.addEventListener('click', () => {
+            const seatNumber = seat.dataset.seat;
+            if (selectedSeats.includes(seatNumber)) {
+                selectedSeats = selectedSeats.filter(s => s !== seatNumber);
+                seat.classList.remove('selected');
+            } else {
+                selectedSeats.push(seatNumber);
+                seat.classList.add('selected');
+            }
+            selectedSeatsDisplay.textContent = selectedSeats.length > 0 ?
+                `Selected Seats: ${selectedSeats.join(', ')}` : 'Selected Seats: None';
+        });
+    });
+
+    document.getElementById('continue-btn').addEventListener('click', () => {
+        if(selectedSeats.length === 0){
+            alert("Please select at least one seat to continue.");
+            return;
+        }
+        window.scrollTo({ top: document.getElementById('pay').offsetTop, behavior: 'smooth' });
+    });
+</script>
 
 </body>
 </html>

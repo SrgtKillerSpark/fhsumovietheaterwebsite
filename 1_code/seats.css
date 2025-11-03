@@ -1,0 +1,79 @@
+/* Seat Selection Section */
+.seat-section {
+    max-width: 300px;
+    margin: 150px auto 60px;
+    text-align: center;
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.seat-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.seat {
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 8px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.seat:hover {
+    background-color: #666;
+    transform: scale(1.05);
+}
+
+.seat.selected {
+    background-color: #e8a90f;
+    color: #111;
+    transform: scale(1.05);
+}
+
+.screen {
+    background: #999;
+    height: 20px;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 6px;
+    color: #111;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#selected-seats {
+    margin-top: 20px;
+    color: #e8a90f;
+    font-size: 16px;
+}
+
+#continue-btn {
+    margin-top: 25px;
+    background: #ea0d19;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s;
+}
+
+#continue-btn:hover {
+    transform: scale(1.05);
+    background-color: #ff2a2a;
+}
