@@ -71,7 +71,7 @@
 <!-- Form -->
  <div id="pay">
     <h2>Payment Information</h2>
-    <form>
+    <form action="payment-confirmation.html" method="get" id="payment-form">
         <label for="fullname" id="name-label">Name:</label>
         <input type="text" id="fullname" name="fullname" value="" required>
 
@@ -82,8 +82,8 @@
 
         <label for="month" id="month-label">Month</label>
         <label for="year" id="year-label">Year</label>
-        <input type="text" list="months" id="month" size="3" required>
-        <input type="text" list="years" id="year" size="3" required>
+        <input type="text" list="months" id="month" name="month" size="3" required>
+        <input type="text" list="years" id="year" name="year" size="3" required>
 
         <label for="cvv" id="cvv-label">CVV:</label> <br>
         <input type="text" id="cvv" name="cvv" required>
@@ -94,7 +94,7 @@
         <input type="text" id="street" name="street" required>
 
         <label for="city" id="city-label">City:</label>
-        <input type="text" id="city" name="street" required>
+        <input type="text" id="city" name="city" required>
 
         <label for="state" id="state-label">State:</label>
         <input type="text" id="state" name="state" required>
@@ -102,7 +102,9 @@
         <label for="zip" id="zip-label">Zip Code:</label>
         <input type="text" id="zip" name="zip" required>
 
-        <input type="submit" id="submit">
+        <input type="hidden" id="seats-field" name="seats" value="">
+
+        <button type="submit" class="submit-order-button">Submit</button>
     </form>
 
 </div>
@@ -163,6 +165,13 @@
             return;
         }
         window.scrollTo({ top: document.getElementById('pay').offsetTop, behavior: 'smooth' });
+    });
+
+    // Pass selected seats to payment form
+    const paymentForm = document.getElementById('payment-form');
+    const seatsField = document.getElementById('seats-field');
+    paymentForm.addEventListener('submit', () => {
+        seatsField.value = selectedSeats.join(', ');
     });
 </script>
 

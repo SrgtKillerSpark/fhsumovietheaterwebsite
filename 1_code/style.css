@@ -316,3 +316,75 @@ html {
     border-radius: 12px;
     background: #1a1a1a;
 }
+
+/* Payment Confirmation Page Styles */
+.confirmation-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.confirmation-container h2 {
+  color: #8c0000;
+  margin-bottom: 1em;
+}
+
+.order-summary, .payment-details, .confirmation-message {
+  text-align: left;
+  margin-bottom: 20px;
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.order-summary h3,
+.payment-details h3,
+.confirmation-message h3 {
+  color: #8c0000;
+  margin-bottom: 10px;
+}
+
+.actions {
+  margin-top: 25px;
+}
+
+.button {
+  background-color: #8c0000;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #a63c3c;
+}
+
+.button.secondary {
+  background-color: #555;
+}
+
+.button.secondary:hover {
+  background-color: #777;
+}
+
+.submit-order-button {
+    display: inline-block;
+    background: #d71b1b;      /* same red vibe as your showtime buttons */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.submit-order-button:hover {
+    background: #a31313;
+}
