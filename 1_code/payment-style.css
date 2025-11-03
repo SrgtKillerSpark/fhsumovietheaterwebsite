@@ -55,18 +55,25 @@ text-align: center;
 
 #month-label{
     grid-area: l3;
+    margin-right: 5px;
 }
 
 #year-label{
     grid-area: l4;
+    margin-left: 5px;
+    justify-self: left !important;
 }
 
 #month{
     grid-area: month;
+    width: 35px;
+    justify-self: right;
 }
 
 #year{
     grid-area: year;
+    width: 35px;
+    justify-self: left;
 }
 
 #cvv-label{
