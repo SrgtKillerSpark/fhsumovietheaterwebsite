@@ -1,0 +1,25 @@
+#info{
+    display: grid;
+    grid-template-areas: 
+    '. .'
+    '. .'
+    '. .'
+    '. .'
+    '. .'
+    'button button';
+    margin: 150px auto;
+    width: 400px;
+    column-gap: 10px;
+}
+
+.label{
+    justify-self: right;
+}
+
+.data{
+    justify-self: left;
+}
+
+#button1{
+    grid-area: button;
+}
