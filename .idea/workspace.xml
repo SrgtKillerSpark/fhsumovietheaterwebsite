@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38059ad7-aeca-4bdf-9475-533133cf0d03" name="Changes" comment="moved current frontend files to front end folder and created backend folder">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/blackphone.html" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/blackphone.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/browse.css" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/browse.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/browse.html" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/browse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/goodfortune.html" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/goodfortune.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/images/blackphone2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/images/blackphone2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/images/goodfortune.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/images/goodfortune.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/images/movie theater.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/images/movie theater.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/images/springsteen.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/images/springsteen.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/images/tronares.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/images/tronares.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/pay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/payment-confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/payment-confirmation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/payment-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/payment-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/purchase-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/purchase-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/purchase.html" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/purchase.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/seats.css" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/seats.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/springsteen.html" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/springsteen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/tronares.html" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/tronares.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_code/database/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +28,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -59,6 +40,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JavaScript Debug.index.html.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -70,6 +52,14 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "GenericSQL"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -94,7 +84,7 @@
       <workItem from="1762104461462" duration="615000" />
       <workItem from="1764379735769" duration="1000" />
       <workItem from="1764525839545" duration="341000" />
-      <workItem from="1764526190412" duration="1945000" />
+      <workItem from="1764526190412" duration="4647000" />
     </task>
     <task id="LOCAL-00001" summary="added .idea to gitignore">
       <option name="closed" value="true" />
@@ -128,7 +118,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764526722997</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="moved current frontend files to front end folder and created backend folder">
+      <option name="closed" value="true" />
+      <created>1764528320562</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764528320562</updated>
+    </task>
+    <task id="LOCAL-00006" summary="moved current frontend files to front end folder and created backend folder">
+      <option name="closed" value="true" />
+      <created>1764528350809</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764528350809</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
