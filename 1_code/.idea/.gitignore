@@ -7,6 +7,6 @@
 /dataSources/
 /dataSources.local.xml
 
-#remove .idea from repo
-.idea/
-.1_code/.idea/
+#remove .idea from repopository
+**/.idea/
+
