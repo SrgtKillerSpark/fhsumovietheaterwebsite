@@ -388,3 +388,15 @@ html {
 .submit-order-button:hover {
     background: #a31313;
 }
+
+/* Modal styles */
+.modal { position: fixed; inset:0; display:grid; place-items:center; background: rgba(0,0,0,0.6); z-index:9999; }
+.modal[hidden] { display:none; }
+.modal-content { position: relative; background:#0f0f0f; padding:22px 20px; border-radius:10px; width:92%; max-width:420px; text-align:center;}
+.modal-close {position:absolute; right:12px; top:8px; background:transparent; border:none; color:#fff; font-size:22px; cursor:pointer; }
+#modalEmail { padding:10px 12px; border-radius:8px; border:1px solid #333; background:#0d0d0d; color:#fff; width:100%; box-sizing: border-box; }
+.modal-cancel { background:#666; color:#fff; border:0; padding:10px 12px; border-radius:8px; cursor:pointer; }
+@media (max-width:520px) {
+    .modal-content { padding:18px; } 
+    .modal-close { right:8px; top:6px; }
+}

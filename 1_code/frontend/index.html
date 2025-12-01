@@ -68,7 +68,7 @@
                 <img src="images/goodfortune.jpg" alt="Good Fortune poster" />
             </div>
             <div class="content">
-                <div class="title">"Good Fortune"</div>
+                <div class="title">Good Fortune</div>
                 <div class="meta">R | 1h 38m | Comedy</div>
                 <a href="goodfortune.html" class="buy-btn">Buy Tickets</a>
             </div>
@@ -79,7 +79,7 @@
                 <img src="images/tronares.jpg" alt="Tron Ares poster" />
             </div>
             <div class="content">
-                <div class="title">"Tron: Ares"</div>
+                <div class="title">Tron: Ares</div>
                 <div class="meta">PG-13 · 1h 59m · Sci-Fi</div>
                 <a href="tronares.html" class="buy-btn">Buy Tickets</a>
             </div>
@@ -94,46 +94,46 @@
     <div class="grid">
 
         <article class="card">
-            <div class="poster">Poster
+            <div class="poster">
                 <img src ="images/fnaf2.jpg" alt="Five Nights at Freddy's 2 poster" />
             </div>
             <div class="content">
-                <div class="title">"Five Nights at Freddy's 2"</div>
+                <div class="title">Five Nights at Freddy's 2</div>
                 <div class="meta">PG13 · December 5, 2025 · 1h 44m</div>
-                <button class="buy-btn">Notify Me</button>
+                <button class="notify-btn buy-btn" data-title="Five Nights at Freddy's 2">Notify Me</button>
             </div>
         </article>
 
         <article class="card">
-            <div class="poster">Poster
+            <div class="poster">
                 <img src = "images/avatar_fire_ash.jpg" alt="Avatar: Fire and Ash poster" />
             </div>
             <div class="content">
-                <div class="title">"Avatar: Fire and Ash"</div>
+                <div class="title">Avatar: Fire and Ash</div>
                 <div class="meta">PG13 · December 19, 2025 · Action</div>
-                <button class="buy-btn">Notify Me</button>
+                <button class="notify-btn buy-btn" data-title="Avatar: Fire and Ash">Notify Me</button>
             </div>
         </article>
 
         <article class="card">
-            <div class="poster">Poster
+            <div class="poster">
                 <img src = "images/spongebob_search.jpg" alt="The Spongebob Movie: Search for Squarepants poster" />
             </div>
             <div class="content">
-                <div class="title">"The Spongebob Movie: Search for Squarepants"</div>
+                <div class="title">The Spongebob Movie: Search for Squarepants</div>
                 <div class="meta">PG · December 19, 2025 · Animation</div>
-                <button class="buy-btn">Notify Me</button>
+                <button class="notify-btn buy-btn" data-title="The Spongebob Movie: Search for Squarepants">Notify Me</button>
             </div>
         </article>
 
         <article class="card">
-            <div class="poster">Poster
+            <div class="poster">
                 <img src = "images/doors_when_strange.jpg" alt="The Doors: When You're Strange poster" />
             </div>
             <div class="content">
-                <div class="title">"The Doors: When You're Strange"</div>
+                <div class="title">The Doors: When You're Strange</div>
                 <div class="meta">R · December 4, 2025 · Documentary</div>
-                <button class="buy-btn">Notify Me</button>
+                <button class="notify-btn buy-btn" data-title="The Doors: When You're Strange">Notify Me</button>
             </div>
         </article>
 
@@ -150,10 +150,32 @@
     </p>
 </section>
 
+<!-- Notify Modal -->
+ <div id="notifyModal" class="modal" aria-hidden="true" hidden>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" aria-label="Close">x</button>
+        <h3 id="modalTitle">Notify me</h3>
+        <p id="modalMovie" style="margin-bottom:12px; font-weight:600;"> </p>
+        <form id="modalForm">
+            <label class="visually-hidden" for="modalEmail">Email address</label>
+            <input id="modalHiddenMovie" type="email" placeholder="you@example.com" required />
+            <input id="modalHiddenMovie" type="hidden" name="movie" />
+            <div style="display:flex; gap:10x; margin-top:12px; justify-content:center;">
+                <button type="submit" class="cta-btn">Notify</button>
+                <button type="button" class="buy-btn modal-cancel">Cancel</button>
+            </div>
+        </form>
+        <p id="modalConfirmation" style="margin-top:10px; color:#aaf; display:none;"></p> 
+    </div>
+ </div>
+
 <!-- Footer -->
 <footer class="section footer">
     © 2025 FHSUMOVIETHEATER
 </footer>
+
+<!-- JS file for Notify Me section -->
+ <script src="notify.js"></script>
 
 <!-- JS file for Now Showing section -->
  <script src="nowShowing.js"></script>
