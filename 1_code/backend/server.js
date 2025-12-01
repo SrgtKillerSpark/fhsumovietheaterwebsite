@@ -1,8 +1,6 @@
 import express from 'express';
 import db from './database/database.js';
-import getTheaterByNumber from './classes/theater.js';
-import { getTheaterByID } from './classes/theater.js';
-import { getTheaterByName } from './classes/theater.js';
+import { getTicketByTicketId } from './classes/ticket.js';
 
 const app = express();
 
@@ -13,6 +11,6 @@ app.listen(PORT, () => {
 });
 
 app.get('/', async (req, res) => {
-    const data = await getTheaterByNumber(2);
-    res.send(data);
+    const ticket = await getTicketByTicketId(1);
+    res.send(ticket);
 });
