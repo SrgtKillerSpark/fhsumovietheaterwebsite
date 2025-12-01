@@ -7,5 +7,5 @@ class Ticket {
     seat;
     code;
     status;
-
+    order;
 }

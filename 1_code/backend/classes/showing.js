@@ -2,8 +2,8 @@ import db from '../database/database.js';
 
 class Showing {
     id;
-    movie;
+    movie; // Movie object
     startTime;
-    theater;
+    theater; // Theater object
     soldOut;
 }
