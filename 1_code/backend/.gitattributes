@@ -1,0 +1,2 @@
+# Specifically ignore line endings warnings in the node_modules directory
+node_modules/** text eol=lf
