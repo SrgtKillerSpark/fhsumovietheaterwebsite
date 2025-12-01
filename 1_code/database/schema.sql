@@ -9,7 +9,7 @@ CREATE TABLE Movie (
     rating VARCHAR(10),
     runtimeMinutes INT,
     posterPath VARCHAR(255),
-    status ENUM('now_showing', 'coming_soon') DEFUALT 'now_showing'
+    status ENUM('now_showing', 'coming_soon') DEFAULT 'now_showing'
 );
 
 -- Theater

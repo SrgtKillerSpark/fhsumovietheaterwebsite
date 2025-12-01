@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Five Nights at Freddy's 2 | FHSU Movie Theater</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="top">
+  <header class="navbar">
+    <div class="logo"><a href="index.html">FHSUMOVIETHEATER</a></div>
+    <nav class="nav-links">
+      <a href="index.html#now-showing">Now Showing</a>
+      <a href="index.html#coming-soon">Coming Soon</a>
+      <a href="browse.html">Browse</a>
+    </nav>
+  </header>
+
+  <main class="section" style="margin-top:110px;">
+    <article class="card" style="max-width:980px;margin:0 auto; display:flex; gap:20px;">
+      <div class="poster" style="flex:0 0 360px; height:520px;">
+        <img src="images/fnaf2.jpg" alt="Five Nights at Freddy's 2 poster" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" />
+      </div>
+
+      <div style="flex:1;padding:6px 0;">
+        <h1>Five Nights at Freddy's 2</h1>
+        <p class="meta">PG13 · 1h 44m · Horror / Thriller</p>
+
+        <h3>Synopsis</h3>
+        <p>Anyone can survive five nights. This time, there will be no second chances.</p>
+
+        <h3>Release</h3>
+        <p><strong>Release date:</strong> Dec 12, 2025</p>
+
+        <h3>Showtimes</h3>
+        <p>Showtimes will be posted when confirmed. Sign up to be notified as soon as tickets go on sale.</p>
+
+        <h3>Notify Me</h3>
+        <form id="notify-form-fnaf2">
+          <input id="notify-email-fnaf2" type="email" placeholder="you@example.com" required style="padding:8px;border-radius:6px;border:1px solid #333;width:60%" />
+          <button class="buy-btn" type="submit" style="margin-left:10px;">Notify Me</button>
+        </form>
+        <p id="notify-msg-fnaf2" style="margin-top:8px;color:#ddd;"></p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="section footer">© 2025 FHSUMOVIETHEATER</footer>
+  <script src="notify.js" defer></script>
+</body>
+</html>
