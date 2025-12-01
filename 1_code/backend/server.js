@@ -10,6 +10,6 @@ app.listen(PORT, () => {
 });
 
 app.get('/', async (req, res) => {
-    const data = await db.query('SELECT name, seats, type FROM theater WHERE theater_id = ?', [1]);
+    const data = await db.query('SELECT name, number_of_seats, type FROM theater WHERE theater_id = ?', [1]);
     res.send(data[0]);
 });
