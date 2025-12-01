@@ -1,5 +1,7 @@
 import express from 'express';
 import db from './database/database.js';
+import getTheaterByID from './classes/theater.js';
+import { getTheaterByName } from './classes/theater.js';
 
 const app = express();
 
@@ -10,6 +12,6 @@ app.listen(PORT, () => {
 });
 
 app.get('/', async (req, res) => {
-    const data = await db.query('SELECT name, number_of_seats, type FROM theater WHERE theater_id = ?', [1]);
-    res.send(data[0]);
+    const data = await getTheaterByName('Ballroom');
+    res.send(data);
 });
