@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Account – FHSU Movie Theater</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -12,13 +16,19 @@
     <div class="logo"><a href="index.html">FHSUMOVIETHEATER</a></div>
     <nav class="nav-links">
         <a href="index.html">Home</a>
+        <a href="index.html">Now Showing</a>
+        <a href="index.html">Coming Soon</a>
         <a href="browse.html">Browse</a>
+        <a href="#">Tickets</a>
+        <a href="customer.html">Account</a>
+        <a href="#">Contact</a>
         <a href="customer.html" class="active">Account</a>
     </nav>
 </header>
 
 <section class="section account-section">
 
+    <!-- LOGIN VIEW -->
     <div id="loginView">
         <h2>Customer Login</h2>
         <form id="loginForm" class="account-form">
@@ -30,12 +40,14 @@
 
             <button type="submit" class="cta-btn">Log In</button>
         </form>
+
         <p style="margin-top:10px;">
             Don’t have an account?
             <button type="button" id="showRegisterBtn" class="buy-btn">Create One</button>
         </p>
     </div>
 
+    <!-- REGISTER VIEW -->
     <div id="registerView" hidden>
         <h2>Create Account</h2>
         <form id="registerForm" class="account-form">
@@ -56,8 +68,30 @@
         </button>
     </div>
 
+    <!-- ACCOUNT VIEW -->
     <div id="accountView" hidden>
+
         <h2>Welcome, <span id="accountName"></span></h2>
+
+        <!-- ⭐ PROFILE CARD NOW IN THE RIGHT PLACE ⭐ -->
+        <div class="profile-card">
+            <h3>Your Profile</h3>
+            <p><strong>Name:</strong> <span id="profileName"></span></p>
+            <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+            <p><strong>Member Since:</strong> <span id="profileSince"></span></p>
+        </div>
+
+        <!-- FAVORITE MOVIE SECTION -->
+        <div class="favorite-card">
+            <h3>Your Favorite Movie</h3>
+            <p id="favoriteMovieText">None selected</p>
+        </div>
+
+        <div class="favorite-select">
+            <label for="favoriteSelect"><strong>Select a Favorite Movie:</strong></label>
+            <select id="favoriteSelect"></select>
+            <button id="saveFavoriteBtn" class="buy-btn" style="margin-left:10px;">Save</button>
+        </div>
 
         <h3>Your Ticket History</h3>
         <table class="ticket-table">

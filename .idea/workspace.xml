@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38059ad7-aeca-4bdf-9475-533133cf0d03" name="Changes" comment="moved current frontend files to front end folder and created backend folder">
-      <change afterPath="$PROJECT_DIR$/1_code/frontend/customer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_code/frontend/customer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_code/frontend/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="38059ad7-aeca-4bdf-9475-533133cf0d03" name="Changes" comment="Added a customer page along with account creation function.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/frontend/browse.html" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/browse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_code/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_code/frontend/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_code/frontend/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/customer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_code/frontend/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_code/frontend/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/1_code/frontend/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764528350809</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added a customer page along with account creation function.">
+      <option name="closed" value="true" />
+      <created>1764704775248</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1764704775248</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +155,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added .idea to gitignore" />
     <MESSAGE value="moved current frontend files to front end folder and created backend folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved current frontend files to front end folder and created backend folder" />
+    <MESSAGE value="Added a customer page along with account creation function." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a customer page along with account creation function." />
   </component>
 </project>

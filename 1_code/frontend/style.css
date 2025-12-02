@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -399,4 +400,299 @@ html {
 @media (max-width:520px) {
     .modal-content { padding:18px; } 
     .modal-close { right:8px; top:6px; }
+}
+
+/* ------------------------------
+   FAVORITE MOVIE CARD (Display)
+--------------------------------*/
+.favorite-card {
+    background: #1d1d1d;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
+    border: 1px solid #333;
+}
+
+.favorite-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.35em;
+    color: #f2f2f2;
+}
+
+.favorite-card p {
+    color: #d7d7d7;
+    font-size: 1em;
+}
+
+
+/* ------------------------------
+   FAVORITE SELECT SECTION
+--------------------------------*/
+.favorite-select {
+    background: #181818;
+    padding: 18px 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+.favorite-select label {
+    font-size: 1em;
+    color: #e7e7e7;
+    white-space: nowrap;
+}
+
+.favorite-select select {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 8px;
+    background: #242424;
+    color: #fff;
+    border: 1px solid #444;
+    font-size: 1em;
+    transition: 0.25s;
+}
+
+.favorite-select select:hover {
+    background: #2c2c2c;
+    border-color: #666;
+}
+
+.favorite-select select:focus {
+    outline: none;
+    border-color: #aaf;
+    box-shadow: 0 0 6px #88f;
+}
+
+/* Save button style (reuse buy-btn look + improve) */
+.favorite-select .buy-btn {
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.95em;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.25s;
+}
+
+.favorite-select .buy-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(170,170,255,0.25);
+}
+
+/********************************************
+    ACCOUNT PAGE LAYOUT
+*********************************************/
+.account-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+
+/********************************************
+    GENERIC CARD STYLE (used by all sections)
+*********************************************/
+.account-card,
+.profile-card,
+.favorite-card,
+.favorite-select {
+    background: #1a1a1a;
+    padding: 22px;
+    border-radius: 14px;
+    margin-bottom: 28px;
+    border: 1px solid #2d2d2d;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.35);
+}
+
+/* Headings inside cards */
+.account-card h2,
+.profile-card h3,
+.favorite-card h3,
+.favorite-select label {
+    color: #ffffff;
+}
+
+
+/********************************************
+    LOGIN / REGISTER FORMS
+*********************************************/
+.account-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+    background: #111;
+    border-radius: 14px;
+    border: 1px solid #2b2b2b;
+    box-shadow: 0 0 12px rgba(0,0,0,0.35);
+}
+
+.account-form label {
+    color: #e8e8e8;
+}
+
+.account-form input {
+    padding: 12px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #222;
+    color: #fff;
+    transition: 0.25s;
+}
+
+.account-form input:focus {
+    outline: none;
+    border-color: #88f;
+    box-shadow: 0 0 8px rgba(136,136,255,0.4);
+}
+
+#loginView h2,
+#registerView h2 {
+    margin-bottom: 15px;
+}
+
+
+/********************************************
+    PROFILE CARD
+*********************************************/
+.profile-card p {
+    color: #cfcfcf;
+    margin: 6px 0;
+}
+
+
+/********************************************
+    FAVORITE MOVIE DISPLAY
+*********************************************/
+.favorite-card p {
+    color: #d5d5d5;
+}
+
+
+/********************************************
+    SELECT FAVORITE MOVIE
+*********************************************/
+.favorite-select {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.favorite-select select {
+    flex-grow: 1;
+    padding: 12px;
+    font-size: 1em;
+    border-radius: 8px;
+    background: #252525;
+    border: 1px solid #444;
+    color: #fff;
+    transition: 0.25s;
+}
+
+.favorite-select select:hover {
+    background: #2f2f2f;
+    border-color: #666;
+}
+
+.favorite-select select:focus {
+    outline: none;
+    border-color: #aaf;
+    box-shadow: 0 0 6px #88f;
+}
+
+
+/********************************************
+    TICKET HISTORY TABLE
+*********************************************/
+.ticket-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #111;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 0 12px rgba(0,0,0,0.4);
+}
+
+.ticket-table th {
+    background: #222;
+    padding: 14px;
+    color: #eee;
+    font-weight: 600;
+}
+
+.ticket-table td {
+    padding: 12px;
+    color: #ddd;
+    border-top: 1px solid #2d2d2d;
+}
+
+.ticket-table tr:nth-child(even) td {
+    background: #181818;
+}
+
+.ticket-table tr:nth-child(odd) td {
+    background: #151515;
+}
+
+
+/********************************************
+    BUTTONS
+*********************************************/
+.cta-btn, .buy-btn {
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    transition: 0.25s;
+}
+
+.cta-btn {
+    background: #4a4aff;
+    color: white;
+}
+
+.cta-btn:hover {
+    background: #6f6fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(136,136,255,0.35);
+}
+
+.buy-btn {
+    background: #333;
+    color: #ddd;
+}
+
+.buy-btn:hover {
+    background: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255,255,255,0.15);
+}
+
+
+/********************************************
+    MOBILE RESPONSIVENESS
+*********************************************/
+@media (max-width: 600px) {
+    .favorite-select {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .favorite-select button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .cta-btn,
+    .buy-btn {
+        width: 100%;
+    }
 }

@@ -11,6 +11,12 @@ const registerView = document.getElementById("registerView");
 const registerForm = document.getElementById("registerForm");
 const showRegisterBtn = document.getElementById("showRegisterBtn");
 const backToLoginBtn = document.getElementById("backToLoginBtn");
+const profileName = document.getElementById("profileName");
+const profileEmail = document.getElementById("profileEmail");
+const profileSince = document.getElementById("profileSince");
+const favoriteMovieText = document.getElementById("favoriteMovieText");
+const favoriteSelect = document.getElementById("favoriteSelect");
+const saveFavoriteBtn = document.getElementById("saveFavoriteBtn");
 let loggedInUser = null;
 
 // --- Login Handler ---
@@ -33,10 +39,43 @@ loginForm.addEventListener("submit", (e) => {
 
     loginView.hidden = true;
     accountView.hidden = false;
+
     accountName.textContent = user.name;
+    profileName.textContent = user.name;
+    profileEmail.textContent = user.email;
+    profileSince.textContent = user.memberSince;
+
+    // Show current favorite movie text
+    if (user.favoriteMovie) {
+        const movie = movies.find(m => m.id === user.favoriteMovie);
+        favoriteMovieText.textContent = movie ? movie.title : "None selected";
+    } else {
+        favoriteMovieText.textContent = "None selected";
+    }
+
+    // ⭐ Populate dropdown
+    favoriteSelect.innerHTML =
+        `<option value="none">None</option>` +
+        movies.map(movie =>
+            `<option value="${movie.id}">${movie.title}</option>`
+        ).join("");
+
+    // ⭐ Set dropdown to the user's current favorite
+    if (user.favoriteMovie) {
+        favoriteSelect.value = user.favoriteMovie;
+    } else {
+        favoriteSelect.value = "none";
+    }
 
     loadTicketHistory(user);
 });
+// Populate dropdown with movies
+favoriteSelect.innerHTML =
+    `<option value="none">None</option>` +
+    movies.map(movie =>
+        `<option value="${movie.id}">${movie.title}</option>`
+    ).join("");
+
 
 // --- Load Ticket History ---
 function loadTicketHistory(user) {
@@ -102,7 +141,8 @@ registerForm.addEventListener("submit", (e) => {
         name,
         email,
         password,
-        tickets: []
+        tickets: [],
+        memberSince: new Date().toLocaleDateString()
     };
 
     users.push(newUser);
@@ -112,4 +152,23 @@ registerForm.addEventListener("submit", (e) => {
     registerForm.reset();
     registerView.hidden = true;
     loginView.hidden = false;
+});
+
+saveFavoriteBtn.addEventListener("click", () => {
+    if (!loggedInUser) return;
+
+    let selectedValue = favoriteSelect.value;
+
+    if (selectedValue === "none") {
+        loggedInUser.favoriteMovie = null;
+        favoriteMovieText.textContent = "None selected";
+    } else {
+        const selectedId = Number(selectedValue);
+        loggedInUser.favoriteMovie = selectedId;
+
+        const movie = movies.find(m => m.id === selectedId);
+        favoriteMovieText.textContent = movie ? movie.title : "None selected";
+    }
+
+    alert("Favorite movie updated!");
 });
