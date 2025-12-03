@@ -335,6 +335,7 @@ html {
 }
 
 .order-summary, .payment-details, .confirmation-message {
+  color: black;
   text-align: left;
   margin-bottom: 20px;
   background: #f8f8f8;
