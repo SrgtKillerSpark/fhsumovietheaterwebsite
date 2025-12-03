@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us – FHSU Movie Theater</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo"><a href="index.html">FHSUMOVIETHEATER</a></div>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html">Now Showing</a>
+        <a href="index.html">Coming Soon</a>
+        <a href="browse.html">Browse</a>
+        <a href="#">Tickets</a>
+        <a href="customer.html">Account</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+</header>
+
+<section class="section contact-section">
+
+    <h2>Contact Us</h2>
+    <p class="contact-intro">
+        Have a question about tickets, showtimes, or your account?
+        We’re here to help! Send us a message and our support team will get back to you.
+    </p>
+
+    <div class="contact-card">
+        <form id="contactForm" class="contact-form">
+            <label>Your Name</label>
+            <input type="text" id="contactName" placeholder="John Doe" required>
+
+            <label>Your Email</label>
+            <input type="email" id="contactEmail" placeholder="you@example.com" required>
+
+            <label>Message</label>
+            <textarea id="contactMessage" rows="5" placeholder="Write your message..." required></textarea>
+
+            <button type="submit" class="cta-btn">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+            <h3>Our Information</h3>
+            <p><strong>Email:</strong> support@fhsumovietheater.com</p>
+            <p><strong>Phone:</strong> (785) 555-0199</p>
+            <p><strong>Address:</strong>
+                610 FHSU Movie Theater Way
+                Hays, KS 67601
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<footer class="section footer">
+    © 2025 FHSUMOVIETHEATER
+</footer>
+
+<script>
+    // Simple form handler (no backend required)
+    document.getElementById("contactForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Thank you! Your message has been sent.");
+        e.target.reset();
+    });
+</script>
+
+</body>
+</html>
