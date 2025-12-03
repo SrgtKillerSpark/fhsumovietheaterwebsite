@@ -17,18 +17,18 @@
 
     <section class="order-summary">
       <h3>Order Summary</h3>
-      <p><strong>Movie Title:</strong> Dune: Part Two</p>
-      <p><strong>Showtime:</strong> April 8, 2025 - 5:00 PM</p>
-      <p><strong>Seats:</strong> D3, D4</p>
-      <p><strong>Subtotal:</strong> $25.00</p>
-      <p><strong>Service Fee:</strong> $2.50</p>
-      <p><strong>Tax:</strong> $2.25</p>
-      <p><strong>Total:</strong> <strong>$29.75</strong></p>
+      <p><strong>Movie Title:</strong> <span id="movieTitle">—</span></p>
+      <p><strong>Showtime:</strong> <span id="showtime">—</span></p>
+      <p><strong>Seats:</strong> <span id="seats">—</span></p>
+      <p><strong>Subtotal:</strong> <span id="subtotal">$0.00</span></p>
+      <p><strong>Service Fee:</strong> <span id="fee">$2.50</span></p>
+      <p><strong>Tax:</strong> <span id="tax">$0.00</span></p>
+      <p><strong>Total:</strong> <strong id="total">$0.00</strong></p>
     </section>
 
     <section class="payment-details">
       <h3>Payment Method</h3>
-      <p>Card ending in 4567</p>
+      <p>Card ending in <span id="cardLast4">0000</span></p>
       <p>Payment Status: <strong>Approved ✅</strong></p>
     </section>
 
@@ -47,6 +47,60 @@
   <footer>
     <p>&copy; 2025 FHSU Movie Theater</p>
   </footer>
+
+    <!-- Make this a module so we can import data.js -->
+  <script type="module">
+    import { getShowing, getMovie } from './data.js';
+
+    const qs = new URLSearchParams(location.search);
+    const showingId = Number(qs.get('showingId'));
+    const seatsStr  = (qs.get('seats') || '').trim();
+    const cardLast4 = (qs.get('cardnum') || '').slice(-4);
+
+    const showing = getShowing(showingId);
+    const movie   = showing ? getMovie(showing.movieId) : null;
+
+    // Fill basics
+    document.getElementById('movieTitle').textContent = movie?.title ?? 'Unknown';
+    document.getElementById('seats').textContent = seatsStr || 'None selected';
+
+    // Format date/time
+    const fmt = (iso) => {
+      const d = new Date(iso);
+      const date = d.toLocaleDateString(undefined, { month:'long', day:'numeric', year:'numeric' });
+      const time = d.toLocaleTimeString(undefined, { hour:'numeric', minute:'2-digit' });
+      return `${date} • ${time}`;
+    };
+    document.getElementById('showtime').textContent = showing ? fmt(showing.start) : '—';
+
+    // Simple pricing math
+    const pricePerSeat = 12.50;   // tweak if you want
+    const serviceFee   = 2.50;
+    const taxRate      = 0.09;    // 9% example
+
+    const qty = seatsStr ? seatsStr.split(',').map(s => s.trim()).filter(Boolean).length : 0;
+    const subtotal = qty * pricePerSeat;
+    const tax = +(subtotal * taxRate).toFixed(2);
+    const total = +(subtotal + serviceFee + tax).toFixed(2);
+    const $ = n => `$${n.toFixed(2)}`;
+
+    document.getElementById('subtotal').textContent = $(subtotal);
+    document.getElementById('fee').textContent      = $(serviceFee);
+    document.getElementById('tax').textContent      = $(tax);
+    document.getElementById('total').textContent    = $(total);
+    document.getElementById('cardLast4').textContent = cardLast4 || '0000';
+
+    // (Optional) Save order to localStorage for a future "My Tickets" page
+    const orders = JSON.parse(localStorage.getItem('orders') || '[]');
+    orders.push({
+      createdAt: Date.now(),
+      showingId,
+      movieId: movie?.id ?? null,
+      seats: seatsStr ? seatsStr.split(',').map(s => s.trim()).filter(Boolean) : [],
+      total
+    });
+    localStorage.setItem('orders', JSON.stringify(orders));
+  </script>
 
   <script src="script.js"></script>
 </body>

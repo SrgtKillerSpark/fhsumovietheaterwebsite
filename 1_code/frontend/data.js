@@ -77,14 +77,25 @@ export const movies = [
 // --- Showings Table---
 export const showings = [
   // Tron: Ares (movieId 1)
-  { id: 101, movieId: 1, start: "2025-12-01T17:00:00", auditorium: "A" },
-  { id: 102, movieId: 1, start: "2025-12-01T20:00:00", auditorium: "A" },
+  { id: 101, movieId: 1, start: "2025-12-01T13:00:00", auditorium: "A" }, // 1:00 PM
+  { id: 102, movieId: 1, start: "2025-12-01T16:15:00", auditorium: "A" }, // 4:15 PM
+  { id: 103, movieId: 1, start: "2025-12-01T19:30:00", auditorium: "A" }, // 7:30 PM
+  { id: 104, movieId: 1, start: "2025-12-01T21:45:00", auditorium: "A" }, // 9:45 PM
   // Black Phone 2 (movieId 2)
-  { id: 201, movieId: 2, start: "2025-12-01T18:30:00", auditorium: "B" },
+  { id: 201, movieId: 2, start: "2025-12-01T13:00:00", auditorium: "B" }, // 1:00 PM
+  { id: 202, movieId: 2, start: "2025-12-01T16:15:00", auditorium: "B" }, // 4:15 PM
+  { id: 203, movieId: 2, start: "2025-12-01T19:30:00", auditorium: "B" }, // 7:30 PM
+  { id: 204, movieId: 2, start: "2025-12-01T21:45:00", auditorium: "B" }, // 9:45 PM
   // Good Fortune (movieId 3)
-  { id: 301, movieId: 3, start: "2025-12-01T19:00:00", auditorium: "C" },
+  { id: 301, movieId: 3, start: "2025-12-01T13:00:00", auditorium: "C" }, // 1:00 PM
+  { id: 302, movieId: 3, start: "2025-12-01T16:15:00", auditorium: "C" }, // 4:15 PM
+  { id: 303, movieId: 3, start: "2025-12-01T19:30:00", auditorium: "C" }, // 7:30 PM
+  { id: 304, movieId: 3, start: "2025-12-01T21:45:00", auditorium: "C" }, // 9:45 PM
   // Springsteen (movieId 4)
-  { id: 401, movieId: 4, start: "2025-12-01T16:15:00", auditorium: "D" }
+  { id: 401, movieId: 4, start: "2025-12-01T13:00:00", auditorium: "D" }, // 1:00 PM
+  { id: 402, movieId: 4, start: "2025-12-01T16:15:00", auditorium: "D" }, // 4:15 PM
+  { id: 403, movieId: 4, start: "2025-12-01T19:30:00", auditorium: "D" }, // 7:30 PM
+  { id: 404, movieId: 4, start: "2025-12-01T21:45:00", auditorium: "D" }, // 9:45 PM
 ];
 
 // --- Minimal read helpers ---
