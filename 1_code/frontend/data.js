@@ -6,7 +6,8 @@ export const users = [
         password: "1234",
         tickets: [101, 102],
         memberSince: "1/23/2025",
-        favoriteMovie: 1
+        favoriteMovie: 1,
+        role: "user"
     },
     {
         id: 2,
@@ -15,7 +16,15 @@ export const users = [
         password: "pass123",
         tickets: [201],
         memberSince: "2/21/2025",
-        favoriteMovie: 2
+        favoriteMovie: 2,
+        role: "user"
+    },
+    {
+        id: 100,
+        name: "Admin",
+        email: "admin@fhsu.edu",
+        password: "admin123",
+        role: "admin"
     }
 ];
 
