@@ -49,9 +49,32 @@ export const tickets = [
 
 // --- Movies Table ---
 export const movies = [
-    { id: 1, title: "Tron: Ares" },
-    { id: 2, title: "Black Phone 2" },
-    { id: 3, title: "Good Fortune" },
-    { id: 4, title: "Springsteen: Deliver Me From Nowhere" }
-
+    { id: 1, title: "Tron: Ares",  rating: "PG-13", runtimeMins: 125, poster: "images/tronares.jpg" },
+    { id: 2, title: "Black Phone 2", rating: "R",    runtimeMins: 101, poster: "images/blackphone2.jpg" },
+    { id: 3, title: "Good Fortune",  rating: "PG-13", runtimeMins: 112, poster: "images/goodfortune.jpg" },
+    { id: 4, title: "Springsteen: Deliver Me From Nowhere", rating: "PG-13", runtimeMins: 120, poster: "images/springsteen.jpg" }
 ];
+
+// --- Showings Table---
+export const showings = [
+  // Tron: Ares (movieId 1)
+  { id: 101, movieId: 1, start: "2025-12-01T17:00:00", auditorium: "A" },
+  { id: 102, movieId: 1, start: "2025-12-01T20:00:00", auditorium: "A" },
+  // Black Phone 2 (movieId 2)
+  { id: 201, movieId: 2, start: "2025-12-01T18:30:00", auditorium: "B" },
+  // Good Fortune (movieId 3)
+  { id: 301, movieId: 3, start: "2025-12-01T19:00:00", auditorium: "C" },
+  // Springsteen (movieId 4)
+  { id: 401, movieId: 4, start: "2025-12-01T16:15:00", auditorium: "D" }
+];
+
+// --- Minimal read helpers ---
+export function getMovie(id) {
+  return movies.find(m => m.id === Number(id));
+}
+export function getShowing(id) {
+  return showings.find(s => s.id === Number(id));
+}
+export function getShowingsForMovie(movieId) {
+  return showings.filter(s => s.movieId === Number(movieId));
+}

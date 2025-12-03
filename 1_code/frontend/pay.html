@@ -102,6 +102,7 @@
         <input type="text" id="zip" name="zip" required>
 
         <input type="hidden" id="seats-field" name="seats" value="">
+        <input type="hidden" id="showingId-field" name="showingId" value="">
 
         <button type="submit" class="submit-order-button">Submit</button>
     </form>
@@ -165,6 +166,11 @@
         }
         window.scrollTo({ top: document.getElementById('pay').offsetTop, behavior: 'smooth' });
     });
+
+    // Include showingId with the form submission (so confirmation knows what to show)
+    const params = new URLSearchParams(location.search);
+    const showingId = params.get('showingId');
+    document.getElementById('showingId-field').value = showingId || '';
 
     // Pass selected seats to payment form
     const paymentForm = document.getElementById('payment-form');
