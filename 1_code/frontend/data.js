@@ -28,6 +28,16 @@ export const users = [
     }
 ];
 
+export const admins = [
+    {
+        id: 100,
+        name: "Admin",
+        email: "admin@fhsu.edu",
+        password: "admin123",
+        role: "admin"
+    }
+];
+
 // --- Tickets Table ---
 export const tickets = [
     {
