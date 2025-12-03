@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin – FHSU Movie Theater</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html">FHSUMOVIETHEATER</a>
+    </div>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="customer.html">Customer</a>
+        <a href="admin.html" class="active">Admin</a>
+    </nav>
+</header>
+
+<section class="section account-section">
+
+    <!-- LOGIN VIEW -->
+    <div id="loginView">
+        <h2>Admin Login</h2>
+        <form id="loginForm" class="account-form">
+
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" required>
+
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" required>
+
+            <button type="submit" class="cta-btn">Log In</button>
+
+        </form>
+    </div>
+
+    <!-- ADMIN ACCOUNT VIEW -->
+    <div id="adminView" hidden>
+        <h2>Welcome, <span id="adminName"></span></h2>
+
+        <section>
+            <h3>Currently Playing</h3>
+            <div id="currentMoviesList" class="grid">
+                <!-- Movies appear here -->
+            </div>
+        </section>
+
+        <section>
+            <h3>Add a New Movie</h3>
+
+            <form id="addMovieForm" class="account-form">
+
+                <label for="movieTitle">Title</label>
+                <input type="text" id="movieTitle" required>
+
+                <label for="moviePoster">Poster URL</label>
+                <input type="text" id="moviePoster" required>
+
+                <label for="movieRating">Rating</label>
+                <input type="text" id="movieRating" required>
+
+                <label for="movieRuntime">Runtime (minutes)</label>
+                <input type="number" id="movieRuntime" required>
+
+                <button type="submit" class="cta-btn">Add Movie</button>
+
+            </form>
+        </section>
+
+        <button id="logoutBtn" class="buy-btn" style="margin-top:20px;">
+            Log Out
+        </button>
+    </div>
+
+</section>
+
+<footer class="section footer">
+    © 2025 FHSUMOVIETHEATER
+</footer>
+
+<script type="module" src="admin.js"></script>
+</body>
+</html>
